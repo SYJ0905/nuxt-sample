@@ -1,63 +1,49 @@
 <template>
   <div class="container">
-    <div>
-      <button type="button" class="btn btn-primary">
-        Primary
-      </button>
-      <button type="button" class="btn btn-secondary">
-        Secondary
-      </button>
-      <button type="button" class="btn btn-success">
-        Success
-      </button>
-      <button type="button" class="btn btn-danger">
-        Danger
-      </button>
-      <button type="button" class="btn btn-warning">
-        Warning
-      </button>
-      <button type="button" class="btn btn-info">
-        Info
-      </button>
-      <button type="button" class="btn btn-light">
-        Light
-      </button>
-      <button type="button" class="btn btn-dark">
-        Dark
-      </button>
-      <logo />
-      <h1 class="title">
-        nuxt-sample
-      </h1>
-      <h2 class="subtitle">
-        My posh Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <a href="" @click.prevent="openModal()">開關彈跳視窗</a>
+    <div
+      id="exampleModal"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="exampleModalLabel" class="modal-title">
+              Modal title
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              Save changes
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
+  components: {},
+  methods: {
+    openModal () {
+      $('#exampleModal').modal('show')
+    }
   }
 }
 </script>

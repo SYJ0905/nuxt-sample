@@ -1,3 +1,4 @@
+import webpack from 'webpack'
 
 export default {
   mode: 'universal',
@@ -29,6 +30,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src: '@/plugins/bootstrap.js',
+      ssr: false
+    }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,6 +54,15 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    plugins: [
+      // 這麼寫可以在 .vue 中拿到 $
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        jquery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ],
     extend (config, ctx) {
     }
   }
