@@ -33,6 +33,10 @@ export default {
     {
       src: '@/plugins/bootstrap.js',
       ssr: false
+    },
+    {
+      src: '@/plugins/axios.js',
+      ssr: true
     }
   ],
   /*
