@@ -1,3 +1,4 @@
 if (process.client) {
-  require('bootstrap')
+  // eslint-disable-next-line global-require
+  require('bootstrap');
 }
