@@ -1,21 +1,20 @@
 <template>
-  <div class="container" />
+  <div class="container">
+    <a href="#" @click.prevent="login()">登入</a>
+    <nuxt-link class="text-primary" to="/user-profile">
+      會員中心
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
 
 export default {
   components: {},
-  mounted() {
-    this.get_user_name();
-  },
+  mounted() {},
   methods: {
-    get_user_name() {
-      const vm = this;
-      const api = 'https://randomuser.me/api/';
-      vm.$http.get(api).then((response) => {
-        console.log(response);
-      });
+    login() {
+      localStorage.setItem('test', '測試');
     },
   },
 };
