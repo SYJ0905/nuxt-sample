@@ -8,9 +8,18 @@
 </template>
 
 <script>
+import jsonLd from '@/static/jsonld.json';
 
 export default {
   components: {},
+  asyncData() {
+    return { jsonLd };
+  },
+  jsonld() {
+    const data = [];
+    data.push(this.jsonLd.organization, this.jsonLd.webpage, this.jsonLd.website);
+    return data;
+  },
   mounted() {},
   methods: {
     login() {

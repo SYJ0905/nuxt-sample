@@ -17,6 +17,7 @@ module.exports = {
     'no-undef': 'off',
     'no-unused-vars': 'off',
     'no-console': 'off',
+    'import/no-unresolved': 'off',
   },
   settings: {
     'import/core-modules': ['vue', 'vuex'] // these modules are included in nuxt.js

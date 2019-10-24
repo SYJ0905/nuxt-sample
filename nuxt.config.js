@@ -39,6 +39,10 @@ export default {
       src: '@/plugins/axios.js',
       ssr: true,
     },
+    {
+      src: '@/plugins/jsonld.js',
+      ssr: true,
+    },
   ],
   /*
   ** Nuxt.js dev-modules

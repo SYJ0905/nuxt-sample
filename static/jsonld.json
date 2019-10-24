@@ -1,0 +1,46 @@
+{
+  "organization": {
+    "@context": "http://schema.org",
+    "@id": "公司網址/#organization",
+    "@type": "Organization",
+    "name": "公司名稱",
+    "description": "公司描述",
+    "url": "公司網址",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+886-02-xxxx-xxxx",
+        "areaServed": "TW",
+        "contactType": "Customer Service",
+        "availableLanguage": "Chinese"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "公司地址",
+      "addressLocality": "台北市xx區",
+      "addressRegion": "台灣",
+      "addressCountry": "TW"
+    }
+  },
+  "webpage": {
+    "@context": "http://schema.org",
+    "@id": "公司網址/#webpage",
+    "@type": "WebPage",
+    "name": "頁面名稱",
+    "description": "頁面敘述",
+    "url": "網址",
+    "publisher": {
+      "@type": "Organization",
+      "name": "xxx公司"
+    }
+  },
+  "website": {
+    "@context": "http://schema.org",
+    "@id": "公司網址/#website",
+    "@type": "WebSite",
+    "name": "頁面名稱",
+    "description": "頁面敘述",
+    "url": "公司網址"
+  }
+}
