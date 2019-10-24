@@ -47,6 +47,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
   /*
   ** Nuxt.js modules
@@ -90,6 +91,15 @@ export default {
           callback(null, indexRoutes.concat(indexRoutes, userListRoutes));
         }), (err) => { next(err); });
     },
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: [
+      '/xxx/admin',
+      '/xxx/admin/**',
+      '/xxx/create-order',
+    ],
+    Sitemap: 'https://www.xxx.com.tw/sitemap.xml',
   },
   /*
   ** Build configuration
