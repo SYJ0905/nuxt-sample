@@ -1,6 +1,6 @@
 # nuxt-sample
 
-> My posh Nuxt.js project
+> nuxt 專案環境模板設定
 
 ## Build Setup
 
