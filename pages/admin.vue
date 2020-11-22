@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <nuxt-link class="text-primary" to="/">
-      回首頁
-    </nuxt-link>
+    <p class="text-center">
+      後台
+    </p>
   </div>
 </template>
 

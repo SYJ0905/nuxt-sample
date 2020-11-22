@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>請選擇適當瀏覽器</title>
+  <style>
+    body{
+      background: #e7e7e7;
+      font-family: 微軟正黑體;
+    }
+    .alert-box {
+      border-style: solid;
+      border-width: 1px;
+      display: block;
+      font-weight: normal;
+      margin: 100px auto  0 auto;
+      position: relative;
+      padding: 30px;
+      font-size: 15px;
+      transition: opacity 300ms ease-out;
+      background-color: #ffffff;
+      border-color: #d6d6d6;
+      color: #052e2d;
+      clear: both;
+      overflow: hidden;
+      max-width: 700px;
+    }
+    .alert-box h5 {
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .alert-box p {
+      font-family: inherit;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .browser-list{
+      padding: 0;
+      display: flex;
+      margin: auto;
+      text-align: center;
+      width: 100%;
+    }
+    .browser-list li{
+      width: 25%;
+    }
+    .browser-list li a{
+      display: block;
+      outline: 0;
+    }
+    .browser-list li img{
+      max-width: 100%;
+      vertical-align: middle;
+    }
+    .no-bullet {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="alert-box">
+    <h5>哎呀!看起來你的網頁瀏覽器已經過時了～</h5>
+    <p>我們強烈建議您使用支援的瀏覽器以獲得最佳體驗:<br />以下為推薦的瀏覽器 :</p>
+    <ul class="browser-list no-bullet">
+      <li><a href="https://www.google.com/intl/zh-TW/chrome/" target="_blank"><img src="/browser/chrome.png" alt="Chrome"></a></li>
+      <li><a href="https://www.mozilla.org/zh-TW/firefox/new/" target="_blank"><img src="/browser/firefox.png" alt="Firefox"></a></li>
+      <li><a href="http://www.apple.com/safari/"><img src="/browser/safari.png" alt="Safari"></a></li>
+    </ul>
+  </div>
+</body>
+</html>
