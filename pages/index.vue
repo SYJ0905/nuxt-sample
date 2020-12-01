@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <div class="links">
         <a
           href="https://nuxtjs.org/"
