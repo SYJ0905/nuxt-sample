@@ -24,6 +24,7 @@
     "jquery": "^3.4.1",
     "nuxt": "^2.14.6",
     "nuxt-jsonld": "^1.4.4",
+    "nuxt-start": "^2.14.12",
     "overlayscrollbars": "^1.13.0",
     "overlayscrollbars-vue": "^0.2.2",
     "popper.js": "^1.15.0",
