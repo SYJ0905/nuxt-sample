@@ -49,31 +49,31 @@ export default {
   plugins: [
     {
       src: '@/plugins/bootstrap.js',
-      ssr: false,
+      mode: 'client',
     },
     {
       src: '@/plugins/overlayscrollbars.js',
-      ssr: false,
+      mode: 'client',
     },
     {
       src: '@/plugins/axios.js',
-      ssr: true,
+      ssr: 'server',
     },
     {
       src: '@/plugins/api.js',
-      ssr: true,
+      mode: 'client',
     },
     {
       src: '@/plugins/jsonld.js',
-      ssr: true,
+      ssr: 'server',
     },
     {
       src: '@/plugins/loading.js',
-      ssr: true,
+      ssr: 'server',
     },
     {
       src: '@/plugins/veevalidate.js',
-      ssr: true,
+      ssr: 'server',
     },
   ],
 
