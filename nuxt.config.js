@@ -2,6 +2,7 @@ import webpack from 'webpack';
 // import axios from 'axios';
 
 export default {
+  ssr: false,
   /*
   ** Headers of the page
   */
@@ -48,6 +49,14 @@ export default {
   */
   plugins: [
     {
+      src: '@/plugins/axios.js',
+      ssr: 'server',
+    },
+    {
+      src: '@/plugins/jsonld.js',
+      ssr: 'server',
+    },
+    {
       src: '@/plugins/bootstrap.js',
       mode: 'client',
     },
@@ -56,24 +65,16 @@ export default {
       mode: 'client',
     },
     {
-      src: '@/plugins/axios.js',
-      ssr: 'server',
-    },
-    {
       src: '@/plugins/api.js',
       mode: 'client',
     },
     {
-      src: '@/plugins/jsonld.js',
-      ssr: 'server',
-    },
-    {
       src: '@/plugins/loading.js',
-      ssr: 'server',
+      ssr: 'client',
     },
     {
       src: '@/plugins/veevalidate.js',
-      ssr: 'server',
+      ssr: 'client',
     },
   ],
 
@@ -137,6 +138,9 @@ export default {
   ** Build configuration
   */
   build: {
+    transpile: [
+      'vee-validate/dist/rules',
+    ],
     /*
     ** You can extend webpack config here
     */
