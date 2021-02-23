@@ -76,6 +76,10 @@ export default {
       src: '@/plugins/veevalidate.js',
       ssr: 'client',
     },
+    {
+      src: '@/plugins/lodash.js',
+      ssr: 'client',
+    },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -154,6 +158,7 @@ export default {
         jQuery: 'jquery',
         jquery: 'jquery',
         'window.jQuery': 'jquery',
+        _: 'lodash',
       }),
     ],
     // extend(config, ctx) {
