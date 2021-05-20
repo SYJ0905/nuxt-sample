@@ -1,5 +1,14 @@
 import Vue from 'vue';
-import { ValidationObserver, ValidationProvider, extend } from 'vee-validate';
+import {
+  ValidationObserver, ValidationProvider, extend, configure,
+} from 'vee-validate';
+import { email, regex } from 'vee-validate/dist/rules';
+
+configure({
+  // classes: {
+  //   invalid: 'form_input_is_invalid',
+  // },
+});
 
 extend('required', {
   validate(value) {
@@ -8,8 +17,18 @@ extend('required', {
       valid: !['', null, undefined].includes(value),
     };
   },
-  message: '請輸入{_field_}',
+  message: '請輸入正確{_field_}',
   computesRequired: true,
+});
+
+extend('regex', {
+  ...regex,
+  message: '請輸入正確密碼格式',
+});
+
+extend('email', {
+  ...email,
+  message: '請輸入正確 Email',
 });
 
 Vue.component('ValidationObserver', ValidationObserver);
