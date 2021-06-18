@@ -189,12 +189,12 @@ export default {
     },
     plugins: [
       // 這麼寫可以在 .vue 中拿到 $
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        jquery: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
+      // new webpack.ProvidePlugin({
+      //   $: 'jquery',
+      //   jQuery: 'jquery',
+      //   jquery: 'jquery',
+      //   'window.jQuery': 'jquery',
+      // }),
     ],
     serverMiddleware: [
       redirectSSL.create({
